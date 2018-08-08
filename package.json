@@ -10,7 +10,7 @@
     "url": "https://github.com/nak2k/node-cfn-package/issues"
   },
   "dependencies": {
-    "aws4-with-assume-role": "0.0.2",
+    "aws4-with-assume-role": "^0.1.0",
     "cfn-read-template": "0.0.2",
     "chalk": "^2.4.1",
     "js-yaml": "^3.12.0",
