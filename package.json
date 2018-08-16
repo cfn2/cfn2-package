@@ -1,6 +1,6 @@
 {
   "name": "cfn-package",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Package template files of CloudFormation",
   "author": "Kengo Nakatsuka <kengo.nakatsuka@gmail.com>",
   "bin": {
