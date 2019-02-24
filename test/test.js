@@ -1,15 +1,25 @@
 const test = require('tape');
-const { packageTemplate } = require('..');
+const { spawn } = require('child_process');
 
-test('test', t => {
-  t.plan(2);
+const command = './bin/cli';
 
-  packageTemplate({
-    bucket: 'node-tmp',
-    prefix: 'cfn-package/test',
-    templateFile: `${__dirname}/template.yaml`,
-  }, (err, template) => {
-    t.error(err);
-    t.ok(template.Resources.file.Properties.CodeUri.startsWith('s3://'));
+test('test package', t => {
+  t.plan(1);
+
+  const args = [
+    '--s3-bucket',
+    'node-tmp',
+    '--s3-prefix',
+    'cfn-package/test',
+    '--template-file',
+    `${__dirname}/template.yaml`,
+  ];
+
+  const child = spawn(command, args, {
+    stdio: 'inherit',
+  });
+
+  child.on('exit', code => {
+    t.equal(code, 0);
   });
 });
