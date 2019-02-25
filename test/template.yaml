@@ -1,13 +1,18 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: cfn-package-test
+
+Transform: AWS::Serverless-2016-10-31
+
 Resources:
   file:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: test.js
-  package_dir:
+      CodeUri: lambda.js
+      Handler: lambda.handler
+      Runtime: nodejs8.10
+  packageDir:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: ..
-  dir:
-    Type: AWS::AppSync::GraphQLSchema
-    Properties:
-      DefinitionS3Location: .
+      Handler: lambda.handler
+      Runtime: nodejs8.10

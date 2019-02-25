@@ -20,6 +20,16 @@ $ cfn-package --template-file path/to/template \
               --s3-prefix prefix
 
 #
+# Package and deploy.
+#
+$ cfn-package --template-file path/to/template \
+              --s3-bucket bucket-name \
+              --s3-prefix prefix \
+              --deploy \
+              --stack-name MyStack \
+              --capabilities CAPABILITY_AUTO_EXPAND,CAPABILITY_IAM
+
+#
 # Update functions directly in a existing stack of the CloudFormation.
 # In this case, Both --update-functions and --stack-name must be specified.
 #
