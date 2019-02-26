@@ -1,11 +1,11 @@
-# cfn-package
+# @cfn2/package
 
 Package template files of CloudFormation.
 
 ## Installation
 
 ```
-npm i -g cfn-package
+npm i -g @cfn2/package
 ```
 
 ## CLI

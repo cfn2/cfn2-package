@@ -1,5 +1,5 @@
 {
-  "name": "cfn-package",
+  "name": "@cfn2/package",
   "version": "0.1.8",
   "description": "Package template files of CloudFormation",
   "author": "Kengo Nakatsuka <kengo.nakatsuka@gmail.com>",
@@ -7,7 +7,7 @@
     "cfn-package": "bin/cli"
   },
   "bugs": {
-    "url": "https://github.com/nak2k/node-cfn-package/issues"
+    "url": "https://github.com/cfn2/cfn2-package/issues"
   },
   "dependencies": {
     "aws-sdk": "^2.409.0",
@@ -19,7 +19,7 @@
   "devDependencies": {
     "tape": "^4.9.1"
   },
-  "homepage": "https://github.com/nak2k/node-cfn-package",
+  "homepage": "https://github.com/cfn2/cfn2-package",
   "keywords": [
     "aws",
     "cloudformation",
@@ -29,7 +29,7 @@
   "main": "lib",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nak2k/node-cfn-package.git"
+    "url": "git+https://github.com/cfn2/cfn2-package.git"
   },
   "scripts": {
     "prepublishOnly": "npm test",
