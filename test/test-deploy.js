@@ -17,7 +17,7 @@ test('test deploy', t => {
     '--stack-name',
     'cfn-package-test',
     '--capabilities',
-    'CAPABILITY_AUTO_EXPAND,CAPABILITY_IAM',
+    'CAPABILITY_IAM',
   ];
 
   const child = spawn(command, args, {
