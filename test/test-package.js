@@ -13,6 +13,8 @@ test('test package', t => {
     'cfn-package/test',
     '--template-file',
     `${__dirname}/template.yaml`,
+    '--output-template-file',
+    's3://node-tmp/cfn-package/test/output-template.yaml',
   ];
 
   const child = spawn(command, args, {
