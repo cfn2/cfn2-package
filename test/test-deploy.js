@@ -18,6 +18,7 @@ test('test deploy', t => {
     'cfn-package-test',
     '--capabilities',
     'CAPABILITY_IAM',
+    '--open',
   ];
 
   const child = spawn(command, args, {
